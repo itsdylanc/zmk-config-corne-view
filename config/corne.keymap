@@ -12,6 +12,8 @@
 #define DEFAULT 0
 #define SYS 1
 #define FUNC 2
+#define GAMING 3
+#define GAMING2 4
 
 / {
         behaviors { 
@@ -44,7 +46,7 @@
                         display-name = "Lower";
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &trans &trans &kp UP &trans &trans
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &trans &trans &kp UP &trans &tog 3
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &kp LEFT &kp DOWN    &kp RIGHT &trans
                           	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
@@ -57,6 +59,26 @@
         &kp LCTRL &trans &trans &trans &trans &trans   &kp MINUS &kp EQUAL  &kp LBKT     &kp RBKT   &kp BSLH &kp GRAVE
         &kp LSHFT &kp LALT &trans &trans &trans &trans   &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &kp TILDE
                   &kp LGUI &mo 1 &kp SPACE   &kp ENTER &mo 2 &kp LALT
+                        >;
+                };
+
+                gaming_layer {
+                        display-name = "Gaming";
+                        bindings = <
+   &trans    &trans      &trans       &trans      &trans       &trans       &kp TAB &kp Q   &kp W    &kp E   &kp R    &kp T
+   &trans    &trans      &trans       &trans      &trans       &trans       &kp Y   &kp A   &kp S    &kp D   &kp F    &kp G
+   &trans    &trans      &trans       &trans      &trans       &trans       &kp H   &kp Z   &kp X    &kp C   &kp V    &kp B
+                          	        &trans     &trans       &tog 3        &kp SPACE  &mo 4   &kp LSHIFT
+                        >;
+                };
+
+                gaming_layer2 {
+                        display-name = "Gaming2";
+                        bindings = <
+   &trans    &trans      &trans       &trans      &trans       &trans       &kp N1   &kp N2   &trans    &kp N4   &kp N5    &kp N6
+   &trans    &trans      &trans       &trans      &trans       &trans       &kp ESC   &trans   &trans    &trans  &kp F    &kp G
+   &trans    &trans      &trans       &trans      &trans       &trans       &kp N3   &kp N7    &kp N8     &kp N9    &kp N0     &kp B
+                          	        &trans     &trans       &tog 3        &kp SPACE  &trans   &kp LSHIFT
                         >;
                 };
 
